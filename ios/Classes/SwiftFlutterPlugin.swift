@@ -33,7 +33,7 @@ public class SwiftFlutterPlugin: NSObject, Flutter.FlutterPlugin {
   public func launchApp (uri: String, result: @escaping FlutterResult) {
     let url = URL(string: uri)
     if (checkAvailability(uri: uri)) {
-        UIApplication.sharedApplication.openURL(url!)
+        UIApplication.shared.openURL(url!)
       result(true)
     }
     result(false)
